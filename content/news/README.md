@@ -39,6 +39,7 @@
 - [**Sky**](Sky/Readme.md)
 - [**The Guardian**](The%20Guardian/Readme.md)
 - [**The Sun**](The%20Sun/Readme.md)
+- [**German Media (Deutsche Medien)**](German/Readme.md)
 
 ## 官方資料 (Official Information)
 

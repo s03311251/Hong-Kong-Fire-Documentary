@@ -39,6 +39,7 @@ This section compiles news reports, feature articles, and official releases from
 - [**Sky**](Sky/Readme.md)
 - [**The Guardian**](The%20Guardian/Readme.md)
 - [**The Sun**](The%20Sun/Readme.md)
+- [**German Media (Deutsche Medien)**](German/Readme.md)
 
 ## Official Information
 
