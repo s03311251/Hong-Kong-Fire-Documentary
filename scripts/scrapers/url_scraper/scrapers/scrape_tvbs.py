@@ -127,9 +127,7 @@ def scrape():
         print(f"TVBS Scraper failed: {e}")
         raw_results = []
 
-    formatted_results = []
-    for r in raw_results:
-        formatted_results.append((r["date"], r["title"], r["link"]))
+    formatted_results = [(r["date"], r["title"], r["link"]) for r in raw_results]
 
     return ("TVBS News", formatted_results)
 

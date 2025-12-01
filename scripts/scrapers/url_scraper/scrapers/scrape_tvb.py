@@ -153,8 +153,6 @@ def scrape():
         print(f"TVB Scraper failed: {e}")
         raw_results = []
 
-    formatted_results = []
-    for r in raw_results:
-        formatted_results.append((r["date"], r["title"], r["link"]))
+    formatted_results = [(r["date"], r["title"], r["link"]) for r in raw_results]
 
     return ("TVB News", formatted_results)
