@@ -34,6 +34,7 @@ SOURCE_DIR_MAP = {
     "BBC 中文": "bbc-chinese",
     "商業電台": "commercial-radio",
     "NOW 新聞報導": "now-news",
+    "Hong Kong Free Press": "hkfp",
 }
 
 def main():
