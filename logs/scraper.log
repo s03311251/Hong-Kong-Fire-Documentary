@@ -1866,3 +1866,470 @@ fatal: unable to auto-detect email address (got 'user@DESKTOP-0PEBUUP.(none)')
 2025-12-07 04:35:56 | INFO     | Starting sync cycle...
 2025-12-07 04:35:56 | INFO     | Syncing with upstream...
 2025-12-07 04:35:57 | INFO     | Daemon stopped by user
+2025-12-07 04:36:02 | INFO     | ============================================================
+2025-12-07 04:36:02 | INFO     | News Scraper Daemon Starting
+2025-12-07 04:36:02 | INFO     | Fork: hk-hack-007/Hong-Kong-Fire-Documentary-i
+2025-12-07 04:36:02 | INFO     | Upstream: adminlby/Hong-Kong-Fire-Documentary
+2025-12-07 04:36:02 | INFO     | Sync interval: 10 minutes
+2025-12-07 04:36:02 | INFO     | PR interval: 60 minutes
+2025-12-07 04:36:02 | INFO     | ============================================================
+2025-12-07 04:36:03 | INFO     | gh CLI authenticated
+2025-12-07 04:36:03 | INFO     | Setting up git remotes...
+2025-12-07 04:36:04 | INFO     | Configured origin remote
+2025-12-07 04:36:04 | INFO     | gh CLI authenticated
+2025-12-07 04:36:04 | INFO     | ----------------------------------------
+2025-12-07 04:36:04 | INFO     | Running periodic health check...
+2025-12-07 04:36:05 | INFO     | gh CLI authenticated
+2025-12-07 04:36:05 | INFO     | Health check passed
+2025-12-07 04:36:05 | INFO     | ----------------------------------------
+2025-12-07 04:36:05 | INFO     | Starting sync cycle...
+2025-12-07 04:36:05 | INFO     | Syncing with upstream...
+2025-12-07 04:36:07 | INFO     | Already up to date with upstream
+2025-12-07 04:36:07 | INFO     | Running scraper...
+2025-12-07 04:36:07 | INFO     | Found 595 new URLs to scrape
+2025-12-07 04:36:59 | ERROR    | Scraper error: No module named 'requests'
+2025-12-07 04:36:59 | INFO     | Committing changes...
+2025-12-07 04:37:00 | INFO     | Committed: chore(scraper): auto-scrape 2025-12-07 04:37
+2025-12-07 04:37:03 | INFO     | Pushed to origin successfully
+2025-12-07 04:37:03 | INFO     | Sync cycle complete
+2025-12-07 04:37:03 | INFO     | ----------------------------------------
+2025-12-07 04:37:03 | INFO     | Starting PR cycle...
+2025-12-07 04:37:04 | INFO     | Pushed to origin successfully
+2025-12-07 04:37:04 | INFO     | Managing PR...
+2025-12-07 04:37:05 | INFO     | Daemon stopped by user
+2025-12-07 04:37:05 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 329, in scrape_url_async
+    await page.goto(url, timeout=timeout, wait_until=strategy["wait_until"])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+        url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 04:37:05 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 329, in scrape_url_async
+    await page.goto(url, timeout=timeout, wait_until=strategy["wait_until"])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+        url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 04:37:05 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 329, in scrape_url_async
+    await page.goto(url, timeout=timeout, wait_until=strategy["wait_until"])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+        url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 04:37:05 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 329, in scrape_url_async
+    await page.goto(url, timeout=timeout, wait_until=strategy["wait_until"])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+        url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 04:37:05 | ERROR    | Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+Traceback (most recent call last):
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 507, in bounded_scrape
+    await scrape_domain_queue(domain, urls, browser, config, registry, results, progress)
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 393, in scrape_domain_queue
+    html, success = await scrape_url_async(url_info, context, config, browser=browser)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\y\Hong-Kong-Fire-Documentary-i\scripts\scrapers\content_scraper\scraper.py", line 329, in scrape_url_async
+    await page.goto(url, timeout=timeout, wait_until=strategy["wait_until"])
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\async_api\_generated.py", line 8992, in goto
+    await self._impl_obj.goto(
+        url=url, timeout=timeout, waitUntil=wait_until, referer=referer
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_page.py", line 555, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_frame.py", line 153, in goto
+    await self._channel.send(
+        "goto", self._navigation_timeout, locals_to_params(locals())
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 123, in _inner_send
+    done, _ = await asyncio.wait(
+              ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 432, in wait
+    return await _wait(fs, timeout, return_when, loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 521, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 557, in wrap_api_call
+    return await cb()
+           ^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 120, in _inner_send
+    callback = self._connection._send_message_to_server(
+        self._object, method, _augment_params(params, timeout_calculator)
+    )
+  File "C:\Users\user\AppData\Local\Programs\Python\Python314\Lib\site-packages\playwright\_impl\_connection.py", line 358, in _send_message_to_server
+    raise self._closed_error
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2025-12-07 04:37:33 | INFO     | ============================================================
+2025-12-07 04:37:33 | INFO     | News Scraper Daemon Starting
+2025-12-07 04:37:33 | INFO     | Fork: hk-hack-007/Hong-Kong-Fire-Documentary-i
+2025-12-07 04:37:33 | INFO     | Upstream: adminlby/Hong-Kong-Fire-Documentary
+2025-12-07 04:37:33 | INFO     | Sync interval: 10 minutes
+2025-12-07 04:37:33 | INFO     | PR interval: 60 minutes
+2025-12-07 04:37:33 | INFO     | ============================================================
+2025-12-07 04:37:34 | INFO     | gh CLI authenticated
+2025-12-07 04:37:34 | INFO     | Setting up git remotes...
+2025-12-07 04:37:34 | INFO     | Configured origin remote
+2025-12-07 04:37:34 | INFO     | gh CLI authenticated
+2025-12-07 04:37:34 | INFO     | ----------------------------------------
+2025-12-07 04:37:34 | INFO     | Running periodic health check...
+2025-12-07 04:37:35 | INFO     | gh CLI authenticated
+2025-12-07 04:37:36 | INFO     | Health check passed
+2025-12-07 04:37:36 | INFO     | ----------------------------------------
+2025-12-07 04:37:36 | INFO     | Starting sync cycle...
+2025-12-07 04:37:36 | INFO     | Syncing with upstream...
+2025-12-07 04:37:36 | INFO     | Already up to date with upstream
+2025-12-07 04:37:36 | INFO     | Running scraper...
+2025-12-07 04:37:36 | INFO     | Found 595 new URLs to scrape
