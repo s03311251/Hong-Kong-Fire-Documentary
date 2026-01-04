@@ -1,9 +1,0 @@
----
-extends: default
-
-rules:
-  document-start: disable  # Many files don't use ---
-  truthy:
-    check-keys: false  # GitHub Actions uses 'on:' which is valid
-  line-length:
-    max: 256  # Config files often have long URLs and descriptions
